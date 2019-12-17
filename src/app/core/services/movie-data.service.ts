@@ -6,5 +6,5 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MovieDataService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }
