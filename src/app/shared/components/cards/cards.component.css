@@ -1,0 +1,23 @@
+.mat-card.card {
+    min-width: 260px;
+    max-width: 300px;
+    flex-grow: 1;
+    margin: 5px;
+}
+
+.mat-card-title {
+    font-size: medium;
+}
+
+.mat-card-content {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-card>.mat-card-content>img {
+    max-width: 100%;
+}
+
+.example-header-image {
+    background-color: blueviolet;
+}
