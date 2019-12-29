@@ -5,17 +5,19 @@ import { HomeRoutingModule } from './home-routing.module';
 import { MoviesComponent } from './movies/movies.component';
 import { HomeComponent } from './home.component';
 import { CardsComponent } from '../../shared/components/cards/cards.component';
+import { AngularMaterialModule } from '../../core/angular-material.module';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    MoviesComponent
+    MoviesComponent,
+    CardsComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    CardsComponent
+    AngularMaterialModule
   ],
   exports:
   [
