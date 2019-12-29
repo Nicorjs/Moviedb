@@ -5,16 +5,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MovieDataService {
-  private apiKey: 'cda8706f0655ce98b223dc86723adca1';
-  private baseUri: 'https://api.themoviedb.org/3/movie/550?api_key=';
-  private imagesUri: 'http://image.tmdb.org/t/p/';
+private apiKey: 'cda8706f0655ce98b223dc86723adca1';
+private baseUri: 'https://api.themoviedb.org/3';
+private imagesUri: 'http://image.tmdb.org/t/p/';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient ) {
   }
 
-  getData() {
-    this.http.get(this.baseUri + this.apiKey).subscribe( (data) => {
-      console.log(data);
-    } );
+  getMovie(id: string ) {
+    const url = `${this.baseUri}/movie/${id}?api_key=${this.apiKey}`;
+    return this.http.get(url);
   }
 }

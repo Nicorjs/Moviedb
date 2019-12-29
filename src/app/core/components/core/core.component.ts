@@ -18,8 +18,5 @@ export class CoreComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {
   }
-  changeStatus() {
-    this.status = false;
-  }
 
 }
