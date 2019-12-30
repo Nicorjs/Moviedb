@@ -1,5 +1,8 @@
 <div class="container">
     <h3 class="mat-h3"> Bienvenido </h3>
-    <app-cards class="container"></app-cards>
+    <div style="width: 100%;">
+        <mat-spinner color="warn" style="margin:0 auto;" *ngIf="isloanding"></mat-spinner>
+    </div>
+    <app-cards [items]="datos" class="container"></app-cards>
 </div>
 <router-outlet></router-outlet>

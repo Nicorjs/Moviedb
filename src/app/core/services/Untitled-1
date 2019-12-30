@@ -1,12 +1,13 @@
-import { Belong } from '../../models/belongTocoll/belong.models';
-import { Genres } from '../../models/genres/genres.models';
+
 export class MovieDto {
-    id: number;
     adult: boolean;
     backdrop_path: string;
     belongs_to_collection?: Belong[];
+    budget: number;
     genres: Genres[];
-    genre_id?: any[];
+    homepage: string;
+    id: number;
+    imdb_id: string;
     original_language: string;
     original_title: string;
     overview: string;
@@ -15,8 +16,13 @@ export class MovieDto {
     production_companies: any[];
     production_countries: any[];
     release_date: string;
+    revenue: string;
     runtime: number;
-    video: boolean;
+    spoken_languages: any[];
+    status: string;
+    tagline: string;
     title: string;
-    vote_average?: number;
+    video: any;
+    vote_average: number;
+    vote_count: number;
 }
