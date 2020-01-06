@@ -19,4 +19,6 @@ export class MovieDto {
     video: boolean;
     title: string;
     vote_average?: number;
+    budget: number;
+    revenue: number;
 }

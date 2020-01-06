@@ -5,7 +5,7 @@
             <mat-card-title>{{movie.title}}
             </mat-card-title>
             <mat-chip color="accent" selected>
-                <mat-icon [matBadge]="movie.vote_average" matBadgeColor="warn" matBadgeOverlap="true">star</mat-icon>
+                <!-- <mat-icon [matBadge]="movie.vote_average" matBadgeColor="warn" matBadgeOverlap="true">star</mat-icon> -->
             </mat-chip>
 
             <mat-card-subtitle>{{movie.release_date | date}}</mat-card-subtitle>
@@ -17,7 +17,7 @@
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button>Ver más</button>
+            <button mat-raised-button color="accent" [routerLink]="movie.id">Ver más</button>
             <!-- <button mat-button>SHARE</button> -->
         </mat-card-actions>
     </mat-card>

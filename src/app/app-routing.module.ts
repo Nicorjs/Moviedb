@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { MoviesComponent } from './modules/home/pages/movies/movies.component';
+import { HomeComponent } from './modules/home/home.component';
 
 
 const routes: Routes = [
@@ -15,8 +17,13 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'index'
-  }
+    redirectTo: 'index/movies'
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'index/movies'
+  },
 ];
 
 @NgModule({

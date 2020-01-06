@@ -14,12 +14,9 @@ private uri = 'https://api.themoviedb.org/3';
   constructor(private http: HttpClient ) {
   }
 
-  getQuery(query: string, multiple: boolean = false) {
-    if (!multiple) {
-      const URL = `https://api.themoviedb.org/3/${ query }?api_key=${this.apiKey}`;
-      return this.http.get(URL);
-    }
-    const url = `https://api.themoviedb.org/3/${ query }&api_key=${this.apiKey}`;
+  getQuery(query: string, options: string = '') {
+    const url = `https://api.themoviedb.org/3/${ query }?api_key=${this.apiKey}&${options}`;
+
     return this.http.get(url);
   }
 
@@ -28,8 +25,8 @@ private uri = 'https://api.themoviedb.org/3';
     return this.getQuery(`movie/${id}`);
   }
 
-  getDiscover() {
-    return this.getQuery(`discover/movie`);
+  getDiscover(page: string = '1') {
+    return this.getQuery(`discover/movie`, `page=${page}`);
   }
 
 }

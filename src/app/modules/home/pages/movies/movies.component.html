@@ -1,0 +1,9 @@
+<div class="container" style="background-color:#FA8072;">
+    <h3 class="mat-h1"> Bienvenido </h3>
+    <br>
+    <br>
+    <div style="width: 100%;">
+        <mat-spinner color="warn" style="margin:0 auto;" *ngIf="isloanding"></mat-spinner>
+    </div>
+    <app-cards [items]="datos" class="container"></app-cards>
+</div>

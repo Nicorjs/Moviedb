@@ -1,0 +1,35 @@
+<div style="width: 100%;">
+    <mat-spinner color="warn" style="margin:0 auto;" *ngIf="loadingData"></mat-spinner>
+</div>
+<div *ngIf="!loadingData" class="container">
+    <div class="descContainer">
+        <div class="descHeader"><img style="height: 200px; width: 300px;" [src]="getimage(movie.backdrop_path, 'w780')"></div>
+        <div>{{movie.overview}}</div>
+        <div>{{movie.popularity | number }}</div>
+        <mat-divider></mat-divider>
+        <div class="descBody">
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Presupuesto y ganancias
+                        </mat-panel-title>
+                        <!-- <mat-panel-description>
+                            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                        </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem">
+                            {{movie.budget | currency }} - presupuesto
+                        </mat-list-item>
+                        <mat-list-item>
+                            {{movie.revenue | currency }} - Ganancias
+                        </mat-list-item>
+                    </mat-list>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+        <div class="descFooter"></div>
+    </div>
+</div>
+{{movie | json}}
